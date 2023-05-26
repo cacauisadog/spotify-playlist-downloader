@@ -7,4 +7,4 @@ class Song:
     name: str
 
     def track(self):
-        return f"{self.name} - {self.artist}"
+        return f"{self.name} - {self.artist} HQ"
