@@ -22,4 +22,4 @@ if __name__ == "__main__":
         song_list.append(Song(artist, name))
 
     for song in song_list:
-        os.system(f"youtube-dl -x --audio-format mp3 'ytsearch1:{song.track()}'")
+        os.system(f"youtube-dl -x --audio-format mp3 -o './songs/%(title)s.%(ext)s' 'ytsearch1:{song.track()}'")
