@@ -1,3 +1,5 @@
+import os
+
 from utils.dataclasses import Song
 from utils.spoti import get_songs_from_playlist
 from utils.trackutils import get_song_artists
@@ -11,4 +13,5 @@ if __name__ == "__main__":
         name = song["track"]["name"]
         song_list.append(Song(artist, name))
 
-    print(song_list)
+    for song in song_list:
+        os.system(f"youtube-dl -x --audio-format mp3 'ytsearch1:{song.track()}'")
